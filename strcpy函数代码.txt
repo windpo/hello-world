@@ -8,11 +8,12 @@ char* StrCpy(char* src){
     //用malloc申请长度为len+1的内存空间
     char* res=(char*)malloc(sizeof(char)*(len+1));
     //将src字符串逐个字符复制到新申请的内存空间
+    char *q=res;
     while(!src){
-        *(res++)=*(src++);
+        *(q++)=*(src++);
     }
     //新申请的内存空间的最后一位放入'\0'
-    *res='\0';
+    *q='\0';
     return res;
     
     /*一次修改111*/
